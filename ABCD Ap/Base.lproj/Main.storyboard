@@ -1,24 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ABCD_Ap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-L7-oAY">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alphabets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpB-NT-pMf">
+                                        <rect key="frame" x="129.33333333333337" y="0.0" width="131.66666666666663" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7db-zj-Tty"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-xo-Tkj">
+                                        <rect key="frame" x="120" y="45" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="FgJ-Lw-moj"/>
+                                            <constraint firstAttribute="height" constant="150" id="O27-Ou-lQN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="t9b-VK-x1Y">
+                                        <rect key="frame" x="0.0" y="200" width="390" height="563"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="cXy-1i-fh9">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="79.666666666666671"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-eG-rTB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="A">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="1" green="0.48468123169999999" blue="0.1461604994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yD4-oD-0RE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H13-lk-O1s">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="B">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="1" green="0.54035496900000002" blue="0.79311402720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xh-FH-Ube"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq1-1d-rlI">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="C">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5w-fe-zEr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfC-RP-Bzw">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="D">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.56189031769999997" green="0.14893653749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2q4-1k-cJd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-y0-Wze">
+                                                <rect key="frame" x="0.0" y="80.666666666666686" width="390" height="79.333333333333314"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlQ-Pu-Ezo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="E">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.56189031769999997" green="0.14893653749999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CzF-CH-k3H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-1w-TUh">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="F">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F43-Ib-cVA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIb-df-fam">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="G">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="1" green="0.54035496900000002" blue="0.79311402720000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efI-cb-mrK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-ti-WTm">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="H">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="1" green="0.48468123169999999" blue="0.1461604994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tsw-Zq-Rua"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-LB-Hco">
+                                                <rect key="frame" x="0.0" y="161" width="390" height="79.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6d-X1-56l">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="I">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.3686274886" green="0.78823530669999997" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6xk-Uc-HtB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huT-Zd-5Tv">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="J">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.73333334920000004" green="0.20784312490000001" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pjG-Z3-q9i"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-OG-nTT">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="K">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.12795762660000001" green="0.41336937930000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8v1-hx-Y80"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKK-oU-0Cb">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="L">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.49596500500000001" green="1" blue="0.66087062429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sX-cM-Dal"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qVi-KA-38n">
+                                                <rect key="frame" x="0.0" y="241.66666666666666" width="390" height="79.666666666666657"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrs-NP-xT4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title=" M">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.49596500500000001" green="1" blue="0.66087062429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKe-rA-fJt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZc-vN-ldy">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="N">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.12795762660000001" green="0.41336937930000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="93I-E9-vxc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeE-eE-dU5">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="O">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.73333334920000004" green="0.20784312490000001" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVc-Ir-ZZp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-g0-eKc">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="P">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.3686274886" green="0.78823530669999997" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J4u-TU-bMM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Zg-Si-SjY">
+                                                <rect key="frame" x="0.0" y="322.33333333333337" width="390" height="79.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsK-cn-QEx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Q">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Trz-80-htY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-94-3kv">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="R">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.26091990100000001" green="0.88456737340000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4h-Xu-Vq8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a2-5W-WhC">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="S">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7QG-JX-VTz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSw-JM-efA">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="T">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LAo-8z-MG8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-MM-o7H">
+                                                <rect key="frame" x="0.0" y="403" width="390" height="79.333333333333314"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3C-ag-nSz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="U">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFW-4J-LAS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xo-Ur-f4x">
+                                                        <rect key="frame" x="97.666666666666686" y="0.0" width="97" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="V">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9af-cg-MnS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXe-ov-bJu">
+                                                        <rect key="frame" x="195.66666666666666" y="0.0" width="96.666666666666657" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="W">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" red="0.26091990100000001" green="0.88456737340000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tnj-T0-iPf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-ac-VnD">
+                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="79.333333333333329"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="X">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OVN-Jf-jsm"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-tK-HhO">
+                                                <rect key="frame" x="0.0" y="483.33333333333343" width="390" height="79.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fz7-Cw-Jb5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Y">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spn-IJ-tWu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-7s-erM">
+                                                        <rect key="frame" x="195.66666666666663" y="0.0" width="194.33333333333337" height="79.666666666666671"/>
+                                                        <color key="tintColor" red="1" green="0.94815922929999996" blue="0.94902008670000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Z">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="backgroundColor" name="AccentColor"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressToPlayASound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JM-hl-60W"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qVi-KA-38n" firstAttribute="leading" secondItem="KXy-LB-Hco" secondAttribute="trailing" constant="-390" id="gsT-6f-CG4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="t9b-VK-x1Y" secondAttribute="trailing" id="2f8-lQ-Q3h"/>
+                                    <constraint firstItem="t9b-VK-x1Y" firstAttribute="top" secondItem="pfH-xo-Tkj" secondAttribute="bottom" constant="5" id="7Pu-If-FmF"/>
+                                    <constraint firstAttribute="bottom" secondItem="t9b-VK-x1Y" secondAttribute="bottom" id="BkI-Zb-cyR"/>
+                                    <constraint firstItem="t9b-VK-x1Y" firstAttribute="leading" secondItem="5TL-L7-oAY" secondAttribute="leading" id="QPr-u7-VIb"/>
+                                    <constraint firstItem="LpB-NT-pMf" firstAttribute="top" secondItem="5TL-L7-oAY" secondAttribute="top" id="mzx-iy-lXl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5TL-L7-oAY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="650-Qn-HCA"/>
+                            <constraint firstItem="5TL-L7-oAY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NUZ-5N-kq2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5TL-L7-oAY" secondAttribute="trailing" id="TXJ-Tr-lBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5TL-L7-oAY" secondAttribute="bottom" id="u9K-pN-Cu6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="pfH-xo-Tkj" id="l4k-BR-VQE"/>
+                        <outlet property="textView" destination="LpB-NT-pMf" id="dFI-Ax-InE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-43.076923076923073" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appstore" width="1024" height="1024"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
